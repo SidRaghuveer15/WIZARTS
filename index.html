@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WizArts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  </head>
+  <body>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+    <header>
+      <a href="#" class="brand logo">WizArts</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="about/index.html">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="videoplayback.mp4" autoplay muted loop></video>
+      <video class="video-slide " src="yt1s.com - Live Wallpaper 4K Wonderful Landscape.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="yt1s.com - Giant Spaceman Little Spaceman4k live wallpaper_1080pFHR.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="yt1s.com - Assassins Creed Syndicate LOGO Gaming Wallpaper.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="yt1s.com - Live Wallpaper Naruto Uchiha Itachi .mp4" autoplay muted loop></video>
+      
+      <div class="content active">
+        <h1 class="title1">Welcome<br></h1>
+        <a class="get-started " href="#">Get Started</a>
+      </div>
+      <div class="content">
+        <h1 class="title2">Nature<br><span></span></h1>
+        <a href="naturepg1.html">View</a>
+      </div>
+      <div class="content">
+        <h1 class="title3">Astrophotography<br><span></span></h1>
+        <a href="#">View</a>
+      </div>
+      <div class="content">
+        <h1 class="title4">Gaming<br><span></span></h1>
+        <a href="#">View</a>
+      </div>
+      <div class="content">
+        <h1 class="titles">Anime<br><span></span></h1>
+        <a href="#">View</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        
+      </div>
+      
+      </div>
+    </section>
+
+
+    <!--Java Script!!-->
+    <script type="text/javascript">
+    
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
